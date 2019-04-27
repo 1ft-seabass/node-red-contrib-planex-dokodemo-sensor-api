@@ -1,0 +1,28 @@
+{
+    "name": "node-red-contrib-planex-dokodemo-sensor-api",
+    "node-red": {
+        "nodes": {
+            "planex-dokodemo-sensor": "planex-dokodemo-sensor.js"
+        }
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/1ft-seabass/node-red-contrib-planex-dokodemo-sensor-api#readme",
+    "author": {
+        "name": "Seigo Tanaka",
+        "email": "seigo@1ft-seabass.jp",
+        "url": "http://1ft-seabass.jp/"
+    },
+    "keywords": [
+        "node-red",
+        "Todoist"
+    ],
+    "dependencies": {
+        "request": "^2.88.0"
+    },
+    "version": "0.0.1",
+    "description": "This Node connects PLANEX Dokodemo Sensor.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/1ft-seabass/node-red-contrib-planex-dokodemo-sensor-api.git"
+    }
+}

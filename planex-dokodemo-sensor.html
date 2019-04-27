@@ -1,0 +1,59 @@
+<script type="text/javascript">
+    RED.nodes.registerType('planex-dokodemo-sensor',{
+        category: 'function',
+        color: '#E2D96E',
+        defaults: {
+            sensor_type: { value:"" },
+            sensor_mac_address: { value:"" },
+            sensor_datetime_from: { value:"" },
+            sensor_datetime_to: { value:"" }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "arrow-in.png",
+        label: function() {
+            return this.name||"planex sensor";
+        },
+        credentials: {
+            sensor_token: {type:"text"},
+            sensor_mac_address: {type:"text"}
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="planex-dokodemo-sensor">
+
+    <div class="form-row">
+        <label for="node-input-sensor_token" required><i class="icon-tag"></i>Token</label>
+        <input type="password" id="node-input-sensor_token">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-sensor_type"><i class="icon-tag"></i>Device</label>
+        <input type="text" id="node-input-sensor_type">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-sensor_mac_address"><i class="icon-tag"></i>MAC Adress</label>
+        <input type="text" id="node-input-sensor_mac_address">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-sensor_datetime_from"><i class="icon-tag"></i>From</label>
+        <input type="text" id="node-input-sensor_datetime_from">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-sensor_datetime_to"><i class="icon-tag"></i>To</label>
+        <input type="text" id="node-input-sensor_datetime_to">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="planex-dokodemo-sensor">
+    <p>node-red-contrib-planex-dokodemo-sensor-api</p>
+</script>

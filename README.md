@@ -6,6 +6,12 @@ This is simple node for PLANEX Dokodemo sensor.
 
 [https://www.planex.co.jp/products/ws-usb/](https://www.planex.co.jp/products/ws-usb/)
 
+## Japanease Readme
+
+Let look when you need this japanease Readme!
+
+[https://github.com/1ft-seabass/node-red-contrib-planex-dokodemo-sensor-api/blob/master/README_ja.md](https://github.com/1ft-seabass/node-red-contrib-planex-dokodemo-sensor-api/blob/master/README_ja.md)
+
 ## Install
 
 Move your Node-RED user directory ~/.node-red

@@ -4,6 +4,8 @@ The Node node-red-contrib-planex-dokodemo-sensor-api connects datas using PLANEX
 
 This is simple node for PLANEX Dokodemo sensor.
 
+[https://www.planex.co.jp/products/ws-usb/](https://www.planex.co.jp/products/ws-usb/)
+
 ## Install
 
 Move your Node-RED user directory ~/.node-red

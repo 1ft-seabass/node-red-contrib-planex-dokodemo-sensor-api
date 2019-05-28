@@ -14,7 +14,7 @@
     },
     "keywords": [
         "node-red",
-        "Todoist"
+        "planex"
     ],
     "dependencies": {
         "request": "^2.88.0"

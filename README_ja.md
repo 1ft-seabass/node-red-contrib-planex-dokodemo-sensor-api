@@ -46,7 +46,7 @@ npm i --unsafe-perm node-red-contrib-planex-dokodemo-sensor-api
 ![image.png (8.2 kB)](https://img.esa.io/uploads/production/attachments/3062/2019/04/29/8131/642f87df-fda9-427e-8300-0ac6ce5de5a4.png)
 
 ```
-[{"id":"42080303.41f03c","type":"planex-dokodemo-sensor","z":"d3d7f120.bc949","sensor_type":"WS-USB01-THP","sensor_mac_address":"24:72:60:40:21:A6","sensor_datetime_from":"2019-04-25 00:00:00","sensor_datetime_to":"2019-04-30 00:00:00","x":920,"y":860,"wires":[["f4ed1c27.66162"]]},{"id":"24a9095c.9f5de6","type":"inject","z":"d3d7f120.bc949","name":"","topic":"","payload":"{\"from\":\"2019-04-27 12:00:00\",\"to\":\"2019-04-28 00:00:00\"}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":730,"y":860,"wires":[["42080303.41f03c"]]},{"id":"f4ed1c27.66162","type":"debug","z":"d3d7f120.bc949","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":1130,"y":860,"wires":[]}]
+[{"id":"1f929a8d.552fd5","type":"planex-dokodemo-sensor","z":"d3d7f120.bc949","sensor_type":"WS-USB01-THP","sensor_mac_address":"24:72:60:40:21:A6","sensor_datetime_from":"2019-05-31 11:33:44","sensor_datetime_to":"2019-05-31 22:33:44","x":560,"y":700,"wires":[["f0973053.e7ab7"]]},{"id":"c6e9e704.8e1128","type":"inject","z":"d3d7f120.bc949","name":"","topic":"","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":350,"y":700,"wires":[["1f929a8d.552fd5"]]},{"id":"f0973053.e7ab7","type":"debug","z":"d3d7f120.bc949","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":770,"y":700,"wires":[]}]
 ```
 
 インポートしてみましょう。

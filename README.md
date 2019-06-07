@@ -64,7 +64,7 @@ this node setting.
 * Device is admin page as "デバイス".
 * MAC Address page as "MAC".
 
-Enter From and To input area with the UTC date format you want to get.
+Enter From and To input area with the UTC datetime format you need to get.
 
 Click inject node button!
 
@@ -77,6 +77,14 @@ Especially be careful with the following settings.
 * Is the device information of Dokodemo sensor admin page correctly input to Token, Device, MAC input area?
 * Are the date ranges in the From and To input areas correct?
 * Are UTC format in the From and To input areas correct?
+
+## History
+
+* ver 0.0.4
+    * Setting input node UTC datetime parameters fitting Node-RED popular parameter rules. Replaced msg.payload.to to to msg.to. Replaced msg.payload.from to to msg.from.
+    * Added getting latest a sensor data node!
+    * fixed a bit Readme.
+    
 
 ## License
 

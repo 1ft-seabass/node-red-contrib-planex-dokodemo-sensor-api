@@ -6,13 +6,34 @@
             sensor_type: { value:"" },
             sensor_mac_address: { value:"" },
             sensor_datetime_from: { value:"" },
-            sensor_datetime_to: { value:"" }
+            sensor_datetime_to: { value:"" },
+            name: {value:""}
         },
         inputs:1,
         outputs:1,
         icon: "arrow-in.png",
         label: function() {
             return this.name||"planex sensor";
+        },
+        credentials: {
+            sensor_token: {type:"text"},
+            sensor_mac_address: {type:"text"}
+        }
+    });
+
+    RED.nodes.registerType('planex-dokodemo-sensor-latest',{
+        category: 'function',
+        color: '#E2D96E',
+        defaults: {
+            sensor_type: { value:"" },
+            sensor_mac_address: { value:"" },
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "arrow-in.png",
+        label: function() {
+            return this.name||"planex sensor latest";
         },
         credentials: {
             sensor_token: {type:"text"},
@@ -54,6 +75,81 @@
     </div>
 </script>
 
+<script type="text/x-red" data-template-name="planex-dokodemo-sensor-latest">
+
+    <div class="form-row">
+        <label for="node-input-sensor_token" required><i class="icon-tag"></i>Token</label>
+        <input type="password" id="node-input-sensor_token">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-sensor_type"><i class="icon-tag"></i>Device</label>
+        <input type="text" id="node-input-sensor_type">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-sensor_mac_address"><i class="icon-tag"></i>MAC Address</label>
+        <input type="text" id="node-input-sensor_mac_address">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
 <script type="text/x-red" data-help-name="planex-dokodemo-sensor">
-    <p>node-red-contrib-planex-dokodemo-sensor-api</p>
+    <p>Connects PLANEX Dokodemo sensor API</p>
+    
+    <h3>Inputs</h3>
+
+    <dl class="message-properties">
+        <dt class="optional">from
+            <span class="property-type">string</span>
+        </dt>
+        <dd> the UTC datetime format you need to get.</dd>
+        <dt class="optional">to
+                <span class="property-type">string</span>
+        </dt>
+        <dd> the UTC datetime format you need to get.</dd>
+    </dl>
+    
+    <h3>Outputs</h3>
+
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">array</span>
+        </dt>
+        <dd> the payload of get sensor data. </dd>
+    </dl>
+    
+    <h3>References</h3>
+
+    <ul>
+        <li><a href="https://github.com/1ft-seabass/node-red-contrib-planex-dokodemo-sensor-api" target="_blank">GitHub</a> - the nodes github repository</li>
+    </ul>
+</script>
+
+<script type="text/x-red" data-help-name="planex-dokodemo-sensor-latest">
+    <p>Getting latest sensor data node from PLANEX Dokodemo sensor API.</p>
+
+    <h3>Details</h3>
+
+    <p>This node is getting latest a sensor data node. It prepare latest a minute span automatically for Dokodemo sensor API UTC datetime and getting sensor data. It publish one latest sensor data after selecting from sensor data array. </p>
+    
+    <h3>Outputs</h3>
+
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">array</span>
+        </dt>
+        <dd> the payload of get sensor data. </dd>
+    </dl>
+    
+    <h3>References</h3>
+
+    <ul>
+        <li><a href="https://github.com/1ft-seabass/node-red-contrib-planex-dokodemo-sensor-api" target="_blank">GitHub</a> - the nodes github repository</li>
+    </ul>
+
 </script>

@@ -135,6 +135,9 @@ This node has setting time period processes.
 
 ## History
 
+* ver 0.0.7
+    * added status ring.
+    * fixed object about clone error temporarily.
 * ver 0.0.6
     * Restore function ver 0.0.4 at planex-dokodemo-sensor-latest node.
         * Realized that I shouldn't adjust to a specific sensor value specification. It restored from version 0.0.4 specification that it outputs raw API data.

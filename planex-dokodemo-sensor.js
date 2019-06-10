@@ -58,8 +58,8 @@ module.exports = function(RED) {
             var _from = moment().utcOffset(0).add(-1,"minutes").format("YYYY-MM-DD HH:mm:ss");
             var _to = moment().utcOffset(0).format("YYYY-MM-DD HH:mm:ss");
 
-            console.log(_from);
-            console.log(_to);
+            // console.log(_from);
+            // console.log(_to);
 
             var _data = {
                 type:'"' + _type + '"',
@@ -80,7 +80,13 @@ module.exports = function(RED) {
             request.get(options, function (error, response, body) {
                 var datas = JSON.parse(body);
                 if(datas.length > 0){
-                    msg.payload = datas.pop();
+                    var _data = datas.pop();
+                    msg.payload = {
+                      "datetime":_data[0],
+                      "temperature":_data[1],
+                      "humidity":_data[2],
+                      "pressure":_data[3]
+                    };
                 } else {
                     msg.payload = [];
                 }

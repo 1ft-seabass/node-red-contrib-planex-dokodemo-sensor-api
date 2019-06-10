@@ -97,10 +97,10 @@ inject ノードをクリックしてデータを取得してみましょう！
 
 ### フロー
 
-![image.png (8.9 kB)](https://img.esa.io/uploads/production/attachments/3062/2019/06/10/8131/c35cbdd2-07b7-4866-9414-d7fa7a59299f.png)
+![image.png (19.6 kB)](https://img.esa.io/uploads/production/attachments/3062/2019/06/10/8131/c5787063-4985-41f6-80a6-02c1742568dd.png)
 
 ```js
-[{"id":"889efdb0.7805","type":"planex-dokodemo-sensor-latest","z":"d3d7f120.bc949","sensor_type":"WS-USB01-THP","sensor_mac_address":"24:72:60:40:21:A6","name":"","x":920,"y":860,"wires":[["cb82c664.98a138"]]},{"id":"cc6f4181.f4e32","type":"inject","z":"d3d7f120.bc949","name":"","topic":"","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":730,"y":860,"wires":[["889efdb0.7805"]]},{"id":"cb82c664.98a138","type":"debug","z":"d3d7f120.bc949","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":1130,"y":860,"wires":[]}]
+[{"id":"889efdb0.7805","type":"planex-dokodemo-sensor-latest","z":"d3d7f120.bc949","sensor_type":"WS-USB01-THP","sensor_mac_address":"24:72:60:40:21:A6","name":"","x":840,"y":860,"wires":[["4cb1f556.003e1c"]]},{"id":"cc6f4181.f4e32","type":"inject","z":"d3d7f120.bc949","name":"","topic":"","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":650,"y":860,"wires":[["889efdb0.7805"]]},{"id":"cb82c664.98a138","type":"debug","z":"d3d7f120.bc949","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":1190,"y":940,"wires":[]},{"id":"4cb1f556.003e1c","type":"change","z":"d3d7f120.bc949","name":"renamed data","rules":[{"t":"set","p":"payload","pt":"msg","to":"{\t  \"datetime\":payload[0],\t  \"temperature\":payload[1],\t  \"humidity\":payload[2],\t  \"pressure\":payload[3]\t}","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":980,"y":940,"wires":[["cb82c664.98a138"]]},{"id":"80f7311d.2d62f","type":"comment","z":"d3d7f120.bc949","name":"WS-USB01-THP latest data sample","info":"","x":720,"y":820,"wires":[]}]
 ```
 
 インポートしてみましょう。
@@ -119,7 +119,7 @@ inject ノードをクリックしてデータを取得してみましょう！
 
 設定が正しければ、デバックタブに情報が表示されます！
 
-このデータは、APIから取得したデータを、分かりやすい名前を振り直したデータです。
+このデータは、APIから取得した、そのままの無加工データです。
 
 ### 内部的な時間について
 

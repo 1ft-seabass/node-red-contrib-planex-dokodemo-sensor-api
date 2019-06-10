@@ -77,7 +77,7 @@ module.exports = function(RED) {
                 qs: _data
             }
             
-            node.status({fill:"yellow",shape:"dot",text:"conecting"});
+            node.status({fill:"yellow",shape:"dot",text:"connecting"});
 
             request.get(options, function (error, response, body) {
                 var datas = JSON.parse(body);
@@ -95,7 +95,7 @@ module.exports = function(RED) {
                 } else {
                     msg.payload = [];
                 }
-                
+
                 node.status({fill:"green",shape:"dot",text:"connected"});
 
                 // msg.response = response;

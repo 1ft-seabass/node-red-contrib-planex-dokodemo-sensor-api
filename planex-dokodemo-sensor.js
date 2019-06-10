@@ -81,12 +81,15 @@ module.exports = function(RED) {
                 var datas = JSON.parse(body);
                 if(datas.length > 0){
                     var _data = datas.pop();
+                    msg.payload = _data;
+                    /*
                     msg.payload = {
                       "datetime":_data[0],
                       "temperature":_data[1],
                       "humidity":_data[2],
                       "pressure":_data[3]
                     };
+                    */
                 } else {
                     msg.payload = [];
                 }
